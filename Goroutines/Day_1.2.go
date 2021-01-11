@@ -1,20 +1,14 @@
-//syntax:
-func name(){
-    // statements
-    // }
-    
-    // // using go keyword as the 
-    // // prefix of your function call
-    // go name()
-
-    
-
+ //advanyages
 package main 
   
-import "fmt"
+import ( 
+    "fmt"
+    "time"
+) 
   
 func display(str string) { 
     for w := 0; w < 6; w++ { 
+        time.Sleep(1 * time.Second) 
         fmt.Println(str) 
     } 
 } 
