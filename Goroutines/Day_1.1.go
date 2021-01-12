@@ -1,29 +1,20 @@
-//syntax:
-func name(){
-    // statements
-    // }
-    
-    // // using go keyword as the 
-    // // prefix of your function call
-    // go name()
+package main
 
-    
+import (
+	"fmt"
+	"time"
 
-package main 
-  
-import "fmt"
-  
-func display(str string) { 
-    for w := 0; w < 6; w++ { 
-        fmt.Println(str) 
-    } 
-} 
-  
-func main() { 
-  
-    // Calling Goroutine 
-    go display("Welcome") 
-  
-    // Calling normal function 
-    display("GeeksforGeeks") 
-} 
+)
+func display(str string){
+	for i:=0;i<5;i++{
+		time.Sleep(1* time.Second)
+		fmt.Println(str)
+	}
+}
+
+func main(){
+
+ 	go display("hellow")
+
+	 display("golang")
+}

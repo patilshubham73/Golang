@@ -1,23 +1,20 @@
- //advanyages
-package main 
-  
-import ( 
-    "fmt"
-    "time"
-) 
-  
-func display(str string) { 
-    for w := 0; w < 6; w++ { 
-        time.Sleep(1 * time.Second) 
-        fmt.Println(str) 
-    } 
-} 
-  
-func main() { 
-  
-    // Calling Goroutine 
-    go display("Welcome") 
-  
-    // Calling normal function 
-    display("GeeksforGeeks") 
-} 
+package main
+
+import (
+	"fmt"
+	"time"
+
+)
+
+
+func main(){
+
+	fmt.Println("Welcome to main Function")
+	
+	go func(){
+		fmt.Println("Welcome to golang")
+	}()
+	
+	time.Sleep(1* time.Second)
+	fmt.Println("bye bye")
+}
